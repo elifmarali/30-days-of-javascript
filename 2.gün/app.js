@@ -153,3 +153,76 @@ console.log(youtube.substr(5,2));
 //substring methods
 console.log(string.substring(0,4));
 console.log(string.substring(4,8));
+
+//split methods
+console.log(fullName);
+console.log(fullName.split(" "));
+let first="Elif";
+console.log(first.split("").reverse().join("").toUpperCase());
+
+
+//trim methods baslangictaki ve sondaki bosluklari kaldirir
+let strings ="      30 days of javascript        ";  
+console.log(strings)
+console.log(strings.trim());; 
+
+//includes icerip icermedigini kontrol eder
+console.log(strings.includes("days"));
+console.log(strings.includes("daysss"));
+console.log(strings.includes("30"));
+console.log(strings.includes("                                              "));
+console.log(strings.includes("ava"));
+
+
+//replace methods degerleri degistirmek bir kez degistirir
+
+console.log(strings.replace("script","python"));
+console.log(strings);
+let str= "merhaba elif, nasilsin elif";
+console.log(str.replace("elif","yunus"));
+//tumunu degistirmek icin replaceAll() methodu kullanilir
+console.log(str.replaceAll("elif","yunus"));
+
+
+//charAt() methods indexteki degerleri getirir
+console.log(strings);
+console.log(strings.charAt(15));
+
+//charCodeAt() methods indexteki degerlerin ascii kodlarini getirir
+//indexOf method stringin icinde geciyorsa ilk gectigi yerin indexini dondurur gecmiyorsa -1 dondurur
+console.log(str);
+console.log(str.indexOf("i"));
+console.log(str.indexOf("il"));
+console.log(str.indexOf("a"));
+console.log(str.indexOf("yu"));
+//lastIndexOf() methos indexOf da ilk gectigi degeri alirdi burda da son gectigi degeri alir
+
+let lastString="I love javascript. If you do not love javascript what else can you love .";
+console.log(lastString.lastIndexOf("love"));
+console.log(lastString.lastIndexOf("you"));
+console.log(lastString.lastIndexOf("javascript"));
+
+//concat method
+let otuz="30";
+console.log(otuz.concat("Days","Of","Javascript"));
+
+//startsWidth method
+console.log(lastString.startsWith("love"));
+console.log(lastString.startsWith("i"));
+console.log(lastString.startsWith("I"));
+//endsWidth method
+console.log(lastString.endsWith("Love"));
+console.log(lastString.endsWith("ve ."));
+console.log(lastString.endsWith("love"));
+
+
+//search method
+console.log(lastString.search('love'))          // 2
+console.log(lastString.search(/javascript/gi))  // 7
+
+
+//match method
+let stringss = 'I love JavaScript. If you do not love JavaScript what else can you love.'
+console.log(stringss.match('love'));
+let pattern = /love/gi;
+console.log(stringss.match(pattern)) ;

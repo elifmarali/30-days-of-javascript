@@ -145,11 +145,53 @@ isDelete?console.log("Silme islemi basarili"):console.log("Silme islemi basarisi
 //Date Objects
 //getFullYear() - getMonth() - getDate() - getHours() - getMinutes() - getSeconds() - getMilliseconds() - getTime() - getDay()
 
-//Creating a time object
-const now=new Date();
-console.log(now); 
+//creating a time object
+const now= new Date();
+console.log(now);
 console.log(now.getFullYear());
-console.log(now.getMonth());
-console.log(now.getDate());
-console.log(now.getDay());
-console.log(now.getMinutes());
+console.log(now.getMonth()); // 0-11
+console.log(now.getDate());  // 1-31
+// Getting the weekday as a number (0-6)
+console.log(now.getDay()); //  Sunday is 0, Monday is 1 and Saturday is 6
+console.log(now.getHours()); 
+console.log(now.getMinutes()); 
+console.log(now.getSeconds());
+console.log(now.getHours()); 
+
+//readeble time
+const now2=new Date();
+let year=now2.getFullYear(), //return year
+month=now2.getMonth()+1, // return month (0-11)
+date = now2.getDate() , // return date (1-31)
+hours= now2.getHours() , // return hours (0-23)
+minutes = now2.getMinutes() , // return minutes
+second = now2.getSeconds() ,
+day = now2.getDay();
+
+let months = [
+    "ocak" , 
+    "subat" ,
+    "mart" ,
+    "nisan" , 
+    "mayis" ,
+    "haziran" ,
+    "temmuz"  , 
+    "agustos" ,
+    "eylul" , 
+    "ekim" , 
+    "kasim" ,
+    "aralik"
+];
+let days = [
+    "pazar",
+    "pazartesi", 
+    "sali" , 
+    "carsamba",
+    "persembe",
+    "cuma",
+    "cumartesi"
+];
+// 18 haziran 2023 , pazar , 21:12:00
+console.log(month);
+ let humanRedableDate = `${date} ${months[month-1]} ${year} , ${days[day]} , ${hours} : ${minutes} : ${second}`;
+ console.log(humanRedableDate);

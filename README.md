@@ -2,19 +2,19 @@
 
 ## 1. gun
 
-<h3>Giris yapildi</h3>
+<h4>Giris yapildi</h4>
 
 ## 2. gun
 
-<h3>Veri turleri </h3>
+<h4>Veri turleri </h4>
 
 ## 3. gun
 
-<h3>Boolean, Operatorler ve Tarih Objesi </h3>
+<h4>Boolean, Operatorler ve Tarih Objesi </h4>
 
 ## 4. gun
 
-<h3>Donguler konusuna giris yapildi</h3>
+<h4>Donguler konusuna giris yapildi</h4>
 <ul>
 <li>If</li>
 <li>If - Else</li>

@@ -56,3 +56,19 @@ Numbers: [0, 3.14, 9.81, 37, 98.6, 100]
 
 Number of numbers: 6
 ```
+
+**Dizideki degerler farkli veri tiplerinde olabilir**
+
+```
+const arr4 = ["Elif",
+    2002,
+    true,
+    { country: "Turkey", city: "Istanbul" },
+    { skills: ["HTML", "CSS", "JavaScript", "React"] }
+]
+console.log(arr4);
+console.log(arr4.length);
+```
+
+_Cikti:_
+`![](./screenshot1.png)`

@@ -36,8 +36,10 @@ Bos dizi olusturmak icin bir cok yontem mevcuttur. Bunlardan 3 tanesini;
 
 **Degerlere sahip bir dizi olusturma**
 
-`const  numbers = [0, 3.14, 37, 98.6, 100] // sayı dizisi`
-`const  webTechs = ['HTML', 'CSS', 'JS', 'React', 'MongDB'] // string dizisi, web teknolojileri`
+```
+const numbers = [0, 3.14, 37, 98.6, 100] // sayı dizisi
+const  webTechs = ['HTML', 'CSS', 'JS', 'React', 'MongDB'] // string dizisi, web teknolojileri
+```
 
 **Dizileri yazdirmak ve dizilerin uzunluklarini ogrenmek**
 

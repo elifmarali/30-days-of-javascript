@@ -71,4 +71,4 @@ console.log(arr4.length);
 ```
 
 _Cikti:_
-![](./screenshot1.png)
+![](screenshot1.png)

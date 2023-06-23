@@ -27,3 +27,9 @@
 ### Diziler
 
 **Bos dizi olusturma**
+Bos dizi olusturmak icin bir cok yontem mevcuttur. Bunlardan 3 tanesini;
+
+1. `const  arr = Array();`
+2. `let arr = new Array();`
+3. `const  arr = [];`
+   seklindedir.

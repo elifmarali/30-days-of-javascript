@@ -16,11 +16,11 @@
 
 ### Donguler konusuna giris yapildi
 
--If
--If - Else
--If - Else If - Else
--Switch
--Ternary Operators
+- If
+- If - Else
+- If - Else If - Else
+- Switch
+- Ternary Operators
 
 ## 5. gun
 

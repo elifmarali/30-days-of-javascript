@@ -146,87 +146,87 @@ Baslica bu metotlar:
 - shift
 - unshift
 
-##### Array
+#### Array
 
 Array:Bir dizi yaratmak için kullanılır.
 
-##### fill ile statik degerler yaratmak
+#### fill ile statik degerler yaratmak
 
 fill: Bütün dizi elemanlarını statik değerle doldurur.
 
-##### Concat kullanarak dizileri birleştirmek
+#### Concat kullanarak dizileri birleştirmek
 
 concat: İki veya daha fazla sayida diziyi birbiri ile birleştirir.
 
-##### Length
+#### Length
 
 Length:Dizi uzunluğunu bildirir.
 
-##### indexOf
+#### indexOf
 
 indexOf: O elemanın dizide olup olmadığını kontrol eder.Eğer o eleman dizide mevcutsa index numarasını, mevcut değilse -1 döner.
 `fruits.indexOf('avocado')`
 `numbers.indexOf(5)`
 
-##### lastIndexOf
+#### lastIndexOf
 
 lastIndexOf: Dizideki son elemanın pozisyonunu verir. Eğer mevcutsa o elemanın index numarasını döner, mevcut değilse -1 döner.
 `numbers.lastIndexOf(6)`
 
-##### includes
+#### includes
 
 includes:Bir dizide bir öğenin olup olmadığını kontrol etmek için kullanılır.Mevcut ise, true değerini döndürür, aksi takdirde false değerini döndürür.
 `webTechs.includes('Node')`
 
 **Diziyi kontrol etmek**
 
-##### Array.isArray
+#### Array.isArray
 
 Array.isArray: Veri tipinin bir dizi olup olmadığını kontrol etmek için kullanılır.
 `Array.isArray(numbers)`
 
 **Diziyi stringe çevirmek**
 
-###### toString
+##### toString
 
 toString:Diziyi string bir ifadeye çevirir.
 
-###### join
+##### join
 
 join: Dizinin elemanlarını birleştirmek için kullanılır, join yönteminde ilettiğimiz argüman dizide birleştirilir ve bir dizi olarak döndürülür. Varsayılan olarak bir virgül ile birleşir, ancak elemanlar arasında birleştirilebilecek farklı dizi parametreleri iletebiliriz.
 
-##### Slice
+#### Slice
 
 Slice: Bir aralıktaki çoklu elemanları dilimler İki parametre alır. Bu parametreler, başlangıç ve bitiş konumlarıdır. Bitiş konumunu dahil etmez.
 
-##### Splice
+#### Splice
 
 Splice: üç parametre alır :başlangıç konumu, kaldırılması gereken eleman sayısı ve eklenmesi gereken eleman sayısı
 
-##### Push kullanarak diziye eleman eklemek
+#### Push kullanarak diziye eleman eklemek
 
 Push: Dizinin sonuna eleman ekler.Varolan bir diziye eleman eklemek için push metodunu kullanırız.
 
-##### Pop kıllanarak diziden eleman çıkarmak
+#### Pop kıllanarak diziden eleman çıkarmak
 
 Pop: Dizinin sonundaki elemanı siler.
 
-##### Shift ile dizinin en başından eleman kaldırmak
+#### Shift ile dizinin en başından eleman kaldırmak
 
 shift: Dizinin en başındaki elemanı siler.
 
-##### Unshift ile dizinin en başından eleman eklemek
+#### Unshift ile dizinin en başından eleman eklemek
 
 unshift: Dizinin başına dizi elemanı ekler.
 
 **Dizi sırasını terse çevirmek**
 
-##### Reverse
+#### Reverse
 
 reverse: Dizi sıralamasını terse çevirir.
 
 **Dizi elemanlarını sıralamak**
 
-##### Sort
+#### Sort
 
 sort: Dizi elemanlarını alfabetik sırada düzenleyin.Sort call back fonksyonu alır, sort'un call back fonksiyonu ile nasıl kullandığımızı ilerleyen bölümlerde göreceğiz.

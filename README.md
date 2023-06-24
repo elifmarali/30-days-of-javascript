@@ -230,3 +230,5 @@ reverse: Dizi sıralamasını terse çevirir.
 #### Sort
 
 sort: Dizi elemanlarını alfabetik sırada düzenleyin.Sort call back fonksyonu alır, sort'un call back fonksiyonu ile nasıl kullandığımızı ilerleyen bölümlerde göreceğiz.
+
+<span style="color:aqua;">Kırmızı renkte yazı</span>

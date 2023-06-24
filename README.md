@@ -187,11 +187,11 @@ Array.isArray: Veri tipinin bir dizi olup olmadığını kontrol etmek için kul
 
 **Diziyi stringe çevirmek**
 
-##### toString
+#### toString
 
 toString:Diziyi string bir ifadeye çevirir.
 
-##### join
+#### join
 
 join: Dizinin elemanlarını birleştirmek için kullanılır, join yönteminde ilettiğimiz argüman dizide birleştirilir ve bir dizi olarak döndürülür. Varsayılan olarak bir virgül ile birleşir, ancak elemanlar arasında birleştirilebilecek farklı dizi parametreleri iletebiliriz.
 

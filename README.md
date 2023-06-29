@@ -230,3 +230,31 @@ reverse: Dizi sıralamasını terse çevirir.
 #### Sort
 
 sort: Dizi elemanlarını alfabetik sırada düzenleyin.Sort call back fonksyonu alır, sort'un call back fonksiyonu ile nasıl kullandığımızı ilerleyen bölümlerde göreceğiz.
+
+## 6. gun
+
+### Donguler
+
+Tekrar eden görevleri gerçekleştirmek için programlama dillerinde farklı döngü türleri kullanırız.
+
+#### for Loop
+
+#### while Loop
+
+while anahtar kelimesinin yanında belirtilen şarta doğru olduğu sürece çalışan bir döngü türüdür. Eğer koşul sürekli doğru çıkacak şekilde ayarlanırsa while döngüsü uygulama kasten kesilmediği sürece sonsuza kadar devam edebilir. Bu yüzden buraya dikkat etmek gerekebilir.
+
+#### do while Loop
+
+do while döngüsü Koşul ile belirtilen alanın doğru olup olmadığına bakmadan kod bloğunu bir kez çalıştırır ve daha sonra Koşul ile belirtilen alan doğru (true) olduğu sürece kod bloğunun çalışması için kullanılır.
+
+#### for of loop
+
+for..of Deyimi, yinelenen nesneler üzerinde yinelemek için bir döngü oluşturur. ES6'da tanıtılan for..of döngü , yeni yinelemeli protokollerin yerini alır. for..in ve forEach() destekler. for..of Array (Diziler), String (Metinler), Map (Haritalar), Set (Kümeler), Array benzeri nesneler (örneğin arguments veya NodeList), ve diğer yinelenen veri yapıları arasında yineleme yapmanızı sağlar.
+
+#### break
+
+Break, bir döngüyü kesmek için kullanılır.
+
+#### continue
+
+Belirli bir döngü aşamasını atlamak için continue anahtar kelimesi kullanılır.

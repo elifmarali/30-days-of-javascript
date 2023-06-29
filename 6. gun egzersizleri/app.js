@@ -146,6 +146,36 @@ for (let i = 0; i <= 100; i++) {
 console.log("Çift sayıların toplamı", ciftSayiTop);
 console.log("Tek sayıların toplamı", tekSayiTop);
 
+/*
+11. for döngüsü ile 1 den 100 e kadar olan çift ve tek sayıların toplamını bulun. Dizi olarak kaydedin
+
+    ```sh
+      [2550, 2500]
+    ```
+*/
+let sumEvenOdd = [];
+let sumOdd = 0;
+let sumEven = 0;
+for (let i = 0; i <= 100; i++) {
+    if (i % 2 == 0) {
+        sumEven += i;
+    }
+    else {
+        sumOdd += i;
+    }
+}
+sumEvenOdd.push(sumEven);
+sumEvenOdd.push(sumOdd);
+console.log(sumEvenOdd);
+
+/*
+12. 5 rastgele sayı dizisi oluşturan küçük bir komut dosyası geliştirin(1-100 arasinda)
+*/
+let yeniDizi = [];
+for (let i = 0; i < 5; i++) {
+    yeniDizi.push(Math.floor(Math.random() * 101));
+}
+console.log(yeniDizi);
 
 
 //level 2

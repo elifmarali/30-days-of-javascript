@@ -180,4 +180,113 @@ console.log(yeniDizi);
 
 //level 2
 /* 1. Herhangi bir sayıda rastgele id numarası atayan bir fonksiyon yazın */
+// 6-11 uzunlunda rastegele id numarası atayan bir kod parcasi
+let randomLength = Math.floor((Math.random() * 5) + 6);
+let characters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
+console.log(characters.length);
+let randomId = "";
+for (let i = 0; i < randomLength; i++) {
+    let randomCharset = Math.floor(Math.random() * characters.length);
+    randomId += characters[randomCharset];
+}
+console.log(randomId);
+
+/* 2. Rastgele hexadecimal sayı üreten bir fonksiyon yazın. */
+/* Hexadecimal format, 16'lık sayı sistemine dayanır ve her basamağı 
+16'nın bir gücünü temsil eder. Sırasıyla 
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F şeklinde sembolleri kullanarak 
+ifade edilen rakamların değerleri şu şekildedir
+*/
+/* 0 = 0
+1 = 1
+2 = 2
+3 = 3
+4 = 4
+5 = 5
+6 = 6
+7 = 7
+8 = 8
+9 = 9
+A = 10
+B = 11
+C = 12
+D = 13
+E = 14
+F = 15 */
+
+let hexadecimalChar = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
+let length = Math.floor((Math.random() * 2) + 2);
+let hexadecimalId = "";
+for (let i = 0; i < length; i++) {
+    let hexRandom = Math.floor(Math.random() * (hexadecimalChar.length));
+    hexadecimalId += hexadecimalChar[hexRandom]
+}
+console.log(hexadecimalId);
+
+/* 3. Rastgele bir rgb renk numarası oluşturan fonksiyon yazın.*/
+// rgb(240,180,80)
+let kontrol = true;
+while (kontrol) {
+    let red = Math.floor(Math.random() * 255);
+    let green = Math.floor(Math.random() * 255);
+    let blue = Math.floor(Math.random() * 255);
+    console.log(`rgb(${red},${green},${blue})`);
+    kontrol = false;
+}
+
+
+/* 4. Yukarıdaki array'i kullanarak rastgele yeni bir dizi oluşturun. */
+let anaDizi = ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+let kopyaDizi = [...anaDizi]
+let newArr = new Array();
+for (let i = 0; i < 4; i++) {
+    let rastgeleIndex = Math.floor(Math.random() * kopyaDizi.length);
+    newArr.push(kopyaDizi[rastgeleIndex]);
+    kopyaDizi.slice(rastgeleIndex, 1)
+
+}
+console.log(newArr);
+
+
+/* 5.  Yukarıdaki array'i kullanarak ülkelerin harf uzunluklarını içeren bir dizi olşturun'. */
+/* [7, 7, 6, 7, 8, 7, 7, 7, 7, 5, 5] */
+function lengthBulma() {
+    let uzunluklar = []
+    for (let i = 0; i < anaDizi.length; i++) {
+        uzunluklar.push(anaDizi[i].length)
+    }
+    console.log(uzunluklar);
+}
+
+lengthBulma();
+
+/* Yukarıdaki diziyi kullanarak aşağıdaki diziyi oluşturun:
+```
+[
+    ['Albania', 'ALB', 7],
+    ['Bolivia', 'BOL', 7],
+    ['Canada', 'CAN', 6],
+    ['Denmark', 'DEN', 7],
+    ['Ethiopia', 'ETH', 8],
+    ['Finland', 'FIN', 7],
+    ['Germany', 'GER', 7],
+    ['Hungary', 'HUN', 7],
+    ['Ireland', 'IRE', 7],
+    ['Iceland', 'ICE', 7],
+    ['Japan', 'JAP', 5],
+    ['Kenya', 'KEN', 5]
+  ]
+  ```
+*/
+
+function bilgilendir() {
+    for (let i = 0; i < anaDizi.length; i++) {
+        console.log(`['${anaDizi[i].charAt(0).toUpperCase()}${anaDizi[i].slice(1, anaDizi[i].length).toLowerCase()}' , '${anaDizi[i].slice(0, 3).toUpperCase()}' , '${anaDizi[i].length}'],`);
+    }
+}
+bilgilendir()
+
+
+/* Yukarıdaki ülkeler dizisinde "land" sözcüğünü içeren bir ülke veya ülke olup olmadığını kontrol edin. 
+"land" içeren ülkeler varsa bunu dizi halinde yazdırın. */

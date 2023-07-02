@@ -261,7 +261,7 @@ function lengthBulma() {
 
 lengthBulma();
 
-/* Yukarıdaki diziyi kullanarak aşağıdaki diziyi oluşturun:
+/*6. Yukarıdaki diziyi kullanarak aşağıdaki diziyi oluşturun:
 ```
 [
     ['Albania', 'ALB', 7],
@@ -288,5 +288,163 @@ function bilgilendir() {
 bilgilendir()
 
 
-/* Yukarıdaki ülkeler dizisinde "land" sözcüğünü içeren bir ülke veya ülke olup olmadığını kontrol edin. 
+/* 7. Yukarıdaki ülkeler dizisinde "land" sözcüğünü içeren bir ülke veya ülke olup olmadığını kontrol edin. 
 "land" içeren ülkeler varsa bunu dizi halinde yazdırın. */
+let yeniDiziLand = [];
+for (let i = 0; i < anaDizi.length; i++) {
+    let kopyaDiziLand = anaDizi[i].toLowerCase();
+    if (kopyaDiziLand.includes("land")) {
+        yeniDiziLand.push(anaDizi[i]);
+    }
+}
+console.log(yeniDiziLand);
+
+
+/* 8. Yukarıdaki ülkeler dizisinde "ia" sözcüğünü içeren bir ülke 
+veya ülke olup olmadığını kontrol edin. "ia" içeren ülkeler varsa 
+bunu dizi halinde yazdırın..
+
+['Albania', 'Bolivia','Ethiopia'] */
+
+let yeniDiziIa = [];
+
+
+for (let i = 0; i < anaDizi.length; i++) {
+    anaDizi[i] = anaDizi[i].toLowerCase();
+    if (anaDizi[i].includes("ia")) {
+        yeniDiziIa.push(anaDizi[i])
+    }
+}
+console.log(yeniDiziIa);
+
+
+/* 9. Yukarıdaki ülkeler dizisini kullanarak en fazla karakter 
+içeren ülkeyi bulun.
+
+Ethiopia */
+let uzun = 0, kelime = "";
+for (let i = 0; i < anaDizi.length; i++) {
+    if (uzun < anaDizi[i].length) {
+        uzun = anaDizi[i].length;
+        kelime = anaDizi[i];
+    }
+}
+console.log("En uzun kelime " + uzun + " uzunlukla " + kelime + " kelimesidir.");
+
+
+/* 10. Yukarıdaki ülkeler dizisini kullanarak, yalnızca 5 karakter içeren ülkeyi bulun.
+
+['Japan', 'Kenya'] */
+
+let besDizi = [];
+for (let i = 0; i < anaDizi.length; i++) {
+    if (anaDizi[i].length == 5) {
+        besDizi.push(anaDizi[i])
+    }
+}
+console.log(besDizi);
+
+// 3. level
+/* 1. Countries dizisini kopyalayın(Avoid mutation) */
+const countries = [
+    'Albania',
+    'Bolivia',
+    'Canada',
+    'Denmark',
+    'Ethiopia',
+    'Finland',
+    'Germany',
+    'Hungary',
+    'Ireland',
+    'Japan',
+    'Kenya'
+]
+
+/* Diziyi karistirmak */
+let countriesCopy = [...countries];
+let karisikCountries = [];
+while (countriesCopy.length > 0) {
+    let randomIndex = Math.floor(Math.random() * countriesCopy.length);
+    karisikCountries.push(countriesCopy[randomIndex]);
+    countriesCopy.splice(randomIndex, 1);
+}
+console.log(karisikCountries);
+
+
+/* 2.Diziler değişebilir. Dizinin orjinalini değişirmeden bir kopyasını oluşturun.
+Oluşturduğunuz diziyi alfabetik olarak sıralayın ve 
+sortedCountries dizisine atayın */
+let sortedCountries = karisikCountries.sort();
+console.log(sortedCountries);
+
+/* 3. webTechs dzisini ve mernStack dizisini sıralayın */
+
+const mernStack = ['MongoDB', 'Express', 'React', 'Node']
+const webTechs = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Redux',
+    'Node',
+    'MongoDB'
+]
+
+let mernWeb = webTechs.concat(mernStack);
+console.log(mernWeb);
+let mernWebSorted = mernWeb.sort()
+console.log(mernWebSorted);
+
+
+/* 5. countries arrayinden "land" sözüğü ile biten ülkeleri farklı bir diziye atayın
+ */
+
+let endsLand = [];
+for (let i = 0; i < countries.length; i++) {
+    if (countries[i].endsWith('land')) {
+        endsLand.push(countries[i])
+    }
+}
+console.log(endsLand);
+
+
+/* 6. countries array indeks en uzun karakterli ülkeyi bulun */
+let largerCountries;
+let largerCountriesLength = 0;
+for (let i = 0; i < countries.length; i++) {
+    if (largerCountriesLength < countries[i].length) {
+        largerCountries = countries[i]
+        largerCountriesLength = countries[i].length
+    }
+}
+console.log("kelime: " + largerCountries + " uzunlugu : " + largerCountriesLength);
+
+
+/* 7. countries array inde 4 karakterli ülkeleri yazdırın */
+let fourthCountries = [];
+for (let i = 0; i < countries.length; i++) {
+    if (countries[i].length == 4) {
+        fourthCountries.push(countries[i])
+    }
+}
+console.log(fourthCountries);
+
+/* 8. countries array inde iki veya daha fazla kelime içieren 
+ülkeleri farklı bir diziye atayın */
+let spaceArr = [];
+for (let i = 0; i < countries.length; i++) {
+    if (countries[i].includes(" ")) {
+        spaceArr.push(countries[i]);
+    }
+}
+console.log(spaceArr);
+console.log(countries);
+/* 9. countries array i ters çevirin ve ülkelerin tüm harflerini büyük hale gertirin  */
+
+let reverseCountries = countries.reverse();
+console.log(reverseCountries);
+let countryCountries = []
+for (let country of reverseCountries) {
+    countryCountries.push(country.toUpperCase())
+}
+console.log(countryCountries);

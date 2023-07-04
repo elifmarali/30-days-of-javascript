@@ -258,3 +258,24 @@ Break, bir döngüyü kesmek için kullanılır.
 #### continue
 
 Belirli bir döngü aşamasını atlamak için continue anahtar kelimesi kullanılır.
+
+## 7. gun
+
+### Fonksiyonlar
+
+Bir fonksiyon, belirli bir görevi gerçekleştirmek üzere tasarlanmış ve yeniden kullanılabilir bir kod bloğu veya programlama tanımıdır.
+
+Bir fonksiyon, function anahtar kelimesi ardından gelen o fonksiyona ait fonksiyon ismi ve parantezler ile tanımlanır. Bu paranteler fonksiyona parametre atayabilmemizi sağlar. Şayet fonksiyon parametre alırsa bu parametre fonksiyon scope'u içerisinde geçerli olan bir değişkendir. Farklı bir kullanım olarak da bu parametreye default değerler atayabiliriz. Eğer bir fonksiyon yardımı ile veri taşımak istiyorsak söz konusu fonksiyonun belirli bir veri türünü geriye değişken olarak döndürmesi gerekir. Daha sonra dönen bu değişkeni bir başka değişkene atayarak kullanabilir.
+
+Fonksiyon kullanmanın avantajları:
+
+- temiz ve okunması kolay
+- yeniden kullanılabilir
+- kolay test edilir
+
+Bir fonksiyon birkaç şekilde tanımlanabilir:
+
+1. Klasik Declaration function
+2. Expression function
+3. Anonymous function
+4. Arrow function

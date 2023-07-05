@@ -279,3 +279,34 @@ Bir fonksiyon birkaç şekilde tanımlanabilir:
 2. Expression function
 3. Anonymous function
 4. Arrow function
+
+#### 1- Klasik Fonksiyon Tanımlama
+
+```
+//parametresiz fonksiyon tanımıı
+function functionName() {
+  // istenilen kod parçası
+}
+functionName() // fonksiyon, fonksiyon adı ve parantezler ile çağırılır
+```
+
+#### Anonymous Function - İsimsiz Fonksiyon
+
+```
+const anonymousFun = function() {
+console.log(
+'İsimsiz bir fonksiyonum ve değerim anonim olarak saklanıyor'
+)
+}
+```
+
+#### 2- Expression Function
+
+Expression function, isimsiz fonksiyonlardır. İsimsiz bir fonksiyon oluşturduktan sonra bir değişkene atayarak kullanırız. Fonksiyondan bir değer geri döndürmek için değişkeni çağırmalıyız.
+
+```
+// Function expression
+const square = function() {
+  console.log("Bu bir expression function türünde fonksiyondur")
+}
+```

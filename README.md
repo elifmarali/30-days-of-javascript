@@ -310,3 +310,60 @@ const square = function() {
   console.log("Bu bir expression function türünde fonksiyondur")
 }
 ```
+
+#### Parametresiz ve dönüş değeri olamayan fonksiyon
+
+Fonksiyon, parametre olmadan tanımlanabilir.
+
+#### Bir değer döndüren fonksiyon
+
+Fonksiyonlar geriye bir değer döndürebilir. bu işlemi return anahtar kelimesini kullanarak sağlarız. Normal fonksiyondan farklı olarak bir field'a atanabilir veya bir metot içerisinde parametre olarak kullanılabilir.
+
+#### Parametreli Fonksiyonlar
+
+Bir fonksiyonda farklı veri türlerini (number, string, boolean, object, function) parametre olarak geçebiliriz.
+
+#### Sınırsız sayıda parametreyle çalışan fonksiyon
+
+Fonksiyonlarla çalışırken kaç tane parametre gerekebileceğini bilemeyebiliriz. Javascript'te bu durumda bize sınırsız sayıda parametre alan fonksiyon yazabilme imkanı tanır. Bu şekilde bir fonksiyon tanımlamanın iki yolu vardır.
+
+#### Klasik fonksiyonda sınırsız sayıda parametre
+
+Bu fonksiyonun tanımlanmasını fonksiyon scope'nda object temelli arguments anahtar kelimesi ile erişilir. Parametre olarak atanan her öğeye arguments üzerinden ulaşabiliriz.
+
+##### Arrow function
+
+Klasik fonksiyona alternatif olarak kullanılan arrow function sözdiziminde ufak bir farklılık vardır. function anahtar kelimesi yerine => işareti kullanılır.
+
+#### Arrow function'da sınırsız sayıda parametre
+
+Arrow function, klasik fonksiyon gibi arguments nesnesine sahip değildir. Arrow function'da sınırsız sayıda parametre kullanmak istersek spread operatör (...) ve hemen ardından parametre adı kullanılır. Fonksiyonda bağımsız değişken olarak geçtiğimiz her şeye arrow functionda dizi olarak erişilebilir. Bir örnek görelim
+
+```
+// arguments nesnesine erişmemize bir örnek
+​
+const sumAllNums = (...args) => {
+ // console.log(arguments), arguments nesnesi bulunamadı
+ // bunun yerine spread operator (...) ve parametre adı kullanalım
+ console.log(args)
+}
+
+sumAllNums(1, 2, 3, 4)
+// [1, 2, 3, 4]
+```
+
+#### Default parametre ile fonksiyon kullanımı
+
+Bazen parametrelere default değerler geçmek isteyebiliriz. Bu durumda fonksiyon çağırımı sırasında söz konusu parametreyi vermek zorunda olmadan kullanabiliriz. Eğer bu parametreyi vermezsek fonksiyon işlevinin parametrenin default değerini kullanarak tamamlayacaktır.
+
+```
+// syntax - söz dizimi
+// fonksiyon tanımı
+function functionName(param = value) {
+  //codes
+}
+
+// fonksiyon çağırımı
+functionName()
+functionName(arg)
+```

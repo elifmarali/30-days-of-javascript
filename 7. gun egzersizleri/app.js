@@ -229,3 +229,179 @@ console.log(printArray([1, 2, 7, 9, 12, 3]));
 
 /* showDateTime()
 08 / 01 / 2020 04: 08 */
+
+function showDateTime() {
+    let now = new Date();
+    let nowYear = now.getFullYear();
+    let nowMonth = now.getMonth();
+    let nowDate = now.getDate();
+    let nowHours = now.getHours()
+    let nowMinutes = now.getMinutes()
+    if (nowMonth < 10) {
+        nowMonth = "0" + nowMonth;
+    }
+    if (nowDate < 10) {
+        nowDate = "0" + nowDate;
+    }
+    let fullFormat = `${nowDate}/${nowMonth}/${nowYear} ${nowHours}:${nowMinutes}`
+    console.log(fullFormat);
+}
+
+showDateTime();
+
+
+/* 5. Declare a function name swapValues. This function swaps value of x to y.
+
+swapValues(3, 4) // x => 4, y=>3
+swapValues(4, 5) // x = 5, y = 4 */
+
+function swapValues(x, y) {
+    let result = `x => ${x}, y=> ${y}`;
+    return result
+}
+console.log(swapValues(3, 4))
+console.log(swapValues(4, 5))
+
+/* 6. Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array (don't use method).
+
+console.log(reverseArray([1, 2, 3, 4, 5]))
+//[5, 4, 3, 2, 1]
+console.log(reverseArray(['A', 'B', 'C']))
+//['C', 'B', 'A'] */
+
+function reverseArray(arr) {
+    let newArr = [];
+    let lastIndex = arr.length - 1;
+    for (let i = 0; i < arr.length; i++) {
+        newArr[i] = arr[lastIndex - i];
+    }
+    return newArr;
+}
+
+console.log(reverseArray([1, 2, 3, 4, 5]));
+console.log(reverseArray(['A', 'B', 'C']))
+
+// 7. Declare a function name capitalizeArray. It takes array as a parameter and it returns the - capitalizedarray.
+
+function CapitalizeArray(arr) {
+    let newArr = []
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push(arr[i].charAt(0).toUpperCase() + arr[i].slice(1).toLowerCase())
+    }
+    return newArr;
+}
+console.log(CapitalizeArray(["istanbul", "erzurum", "gumushane"]));
+
+// 9. Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item
+
+function removeItem(arr, index) {
+    let newArr = []
+    for (let i = 0; i < arr.length; i++) {
+        if (i != index) {
+            newArr.push(arr[i]);
+        }
+    }
+    arr.splice(index, 1)
+    return newArr;
+}
+let arr = ["istanbul", "erzurum", "gumushane", "giresun"];
+console.log(arr);
+console.log(removeItem(arr, 1));
+console.log(removeItem(arr, 0));
+console.log(removeItem(arr, 1));
+
+// 10. Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
+
+let sumOfNumbers = (baslangic, bitis) => {
+    let sum = 0;
+    for (let i = baslangic; i <= bitis; i++) {
+        sum += i;
+    }
+    let result = `${baslangic} ve ${bitis} arasindaki degerler toplami = ${sum}`;
+    return result
+}
+
+console.log(sumOfNumbers(10, 50));
+
+
+//13. Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+
+/* evensAndOdds(100);
+The number of odds are 50.
+The number of evens are 51. */
+function evensAndOdds(number) {
+    let oddSayac = 0; let evenSayac = 0;
+    if (number > 0) {
+        for (let i = 0; i <= number; i++) {
+            if (i % 2 == 0) {
+                evenSayac++;
+            }
+            else {
+                oddSayac++;
+            }
+        }
+    }
+    let result = `The number of odds are ${oddSayac}.\nThe number of evens are ${evenSayac}.`
+    return result
+}
+console.log(evensAndOdds(100));
+
+// 14. Write a function which takes any number of arguments and return the sum of the arguments
+
+/* sum(1, 2, 3) // -> 6
+sum(1, 2, 3, 4) // -> 10 */
+function sum(params) {
+    let sum = 0;
+    for (let i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+    }
+    console.log(sum);
+}
+sum(1, 2, 3)
+sum(1, 2, 3, 4)
+
+// 15. Writ a function which generates a randomUserIp.
+function randomUserIp(param) {
+    let randomIp = "";
+    let random = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    for (let i = 0; i < param; i++) {
+        let randomNumb = Math.floor(Math.random() * random.length);
+        randomIp += random[randomNumb];
+    }
+    return randomIp;
+}
+console.log(randomUserIp(5));
+console.log(randomUserIp(2));
+console.log(randomUserIp(10));
+
+/* 17. Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+
+console.log(randomHexaNumberGenerator());
+'#ee33df' */
+
+function randomHexaNumberGenerator() {
+    let hexadecimalAlp = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
+    let hexadecimalRandom = "#";
+    for (let i = 0; i < 6; i++) {
+        let random = Math.floor(Math.random() * hexadecimalAlp.length)
+        hexadecimalRandom += hexadecimalAlp[random];
+    }
+    return hexadecimalRandom;
+}
+console.log(randomHexaNumberGenerator());
+
+/* 18. Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+
+console.log(userIdGenerator());
+41XTDbE */
+
+function userIdGenerator() {
+    let userId = ""
+    let userChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+    for (let i = 0; i < 7; i++) {
+        let random = Math.floor(Math.random() * userChar.length)
+        userId += userChar[random]
+    }
+    return userId
+}
+console.log(userIdGenerator());

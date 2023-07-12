@@ -405,3 +405,90 @@ function userIdGenerator() {
     return userId
 }
 console.log(userIdGenerator());
+
+
+//level 3
+/* 1. Modify the userIdGenerator function. Declare a function name userIdGeneratedByUser. It doesn’t take any parameter but it takes two inputs using prompt(). 
+One of the input is the number of characters and the second input is the number of ids which are supposed to be generated.
+
+userIdGeneratedByUser()
+'kcsy2
+SMFYb
+bWmeq
+ZXOYh
+2Rgxf
+'
+userIdGeneratedByUser()
+'1GCSgPLMaBAVQZ26
+YD7eFwNQKNs7qXaT
+ycArC5yrRupyG00S
+UbGxOFI7UXSWAyKN
+dIV0SSUTgAdKwStr
+' */
+
+/* function userIdGenerator() {
+    let charactersNumb = Number(prompt("Please enter characters of number : "))
+    let idNumb = Number(prompt("Please enter number of ids: "))
+    let idArr = [];
+    let characters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+    for (let i = 0; i < idNumb; i++) {
+        let id = ""
+        for (let j = 0; j < charactersNumb; j++) {
+            let random = Math.floor(Math.random() * characters.length)
+            id += characters[random]
+        }
+        idArr.push(id)
+    }
+    return idArr;
+}
+userIdGenerator(); */
+
+/* 2. Write a function name rgbColorGenerator and it generates rgb colors.
+rgbColorGenerator()
+rgb(125,244,255) */
+
+const rgbColorGenerator = () => {
+    let rgbCodes = []
+    let rgbRandom;
+    let rgbSentence = ""
+    for (let i = 0; i < 3; i++) {
+        rgbRandom = Math.floor(Math.random() * 256);
+        rgbCodes.push(rgbRandom)
+    }
+    rgbSentence = `rgb(${rgbCodes[0]},${rgbCodes[1]},${rgbCodes[2]})`
+    return rgbSentence;
+}
+console.log(rgbColorGenerator());
+
+/* 3. Write a function arrayOfHexaColors which return any number of hexadecimal colors in an array.
+ */
+function arrayOfHexaColors() {
+    let hexaCode = "";
+    let hexaChars = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
+    let randomHexa;
+    for (let i = 0; i < 6; i++) {
+        randomHexa = Math.floor(Math.random() * hexaChars.length)
+        hexaCode += hexaChars[randomHexa]
+    }
+    return hexaCode;
+}
+console.log(arrayOfHexaColors());
+
+/* 14. Write a function called modifyArray takes array as parameter 
+and modifies the fifth item of the array and return the array. 
+If the array length is less than five it return 'item not found'. */
+
+let array = ['Avocado', 'Tomato', 'Potato', 'Mango', 'Lemon', 'Carrot'];
+let array2 = ['Google', 'Facebook', 'Apple', 'Amazon']
+console.log(array);
+function modifyArray(arr) {
+    if (arr.length > 5) {
+        arr.splice(4, 1)
+        console.log(arr);
+    }
+    else {
+        console.log("item not found");
+    }
+}
+modifyArray(array);
+modifyArray(array2);

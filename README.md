@@ -367,3 +367,29 @@ function functionName(param = value) {
 functionName()
 functionName(arg)
 ```
+
+## 8. Gun
+
+### Scope - Kapsam Kavramlari
+
+- Global Scope
+- Local Scope
+
+var, let veya const olmadan tanımlanan her değişken global scope olarak geçerlidir.
+
+#### Global scope
+
+Aynı dosyanın her yerinde global olarak tanımlanan bir değişkene erişilebilir. Global olma durumu iki şekilde olabilir Dosyanın direkt kendisinde global olabilir veya bazı kod bloklarına göre global olabilir.
+
+#### Local scope
+
+Yerel olarak tanımlanan bir değişkene yalnızca belirli kod bloğunda erişilebilir.
+
+- Block Scope
+- Function Scope
+
+* var anahtar kelimesi ile tanımlanan bir değişken fonksiyon scope'u içerisinde geçerlidir. Ancak let veya const anahtar kelimeleri ile tanımlanan değişkenler block scope'unda geçerlidir. (fonksiyon, if veya diğer dönggü blokları). Block kapsamını biraz daha netleştirmek gerekirse Javascript ve diğer çoğu yazılım dili için süslü parantezler arası demek olur.
+
+* const ile tanımlanan bir değişkenin değerini daha sonraki satırlarda değiştiremeyiz ancak let ile tanımlanan değişkenin değerini değiştirebiliriz. Ben let ve const kullanarak temiz kod yazmanızı ve hata ayıklamanın zor olmasını önlemek için let ve const 'ı kullanmanızı tavsiye ederim. Temel kural olarak, herhangi bir sabit değer için let ve dizi, nesne, ok fonksiyonu ve işlev ifadesi için const özelliğini kullanabilirsiniz.
+
+### Object - Nesne

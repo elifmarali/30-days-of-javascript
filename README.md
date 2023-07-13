@@ -393,3 +393,68 @@ Yerel olarak tanımlanan bir değişkene yalnızca belirli kod bloğunda erişil
 * const ile tanımlanan bir değişkenin değerini daha sonraki satırlarda değiştiremeyiz ancak let ile tanımlanan değişkenin değerini değiştirebiliriz. Ben let ve const kullanarak temiz kod yazmanızı ve hata ayıklamanın zor olmasını önlemek için let ve const 'ı kullanmanızı tavsiye ederim. Temel kural olarak, herhangi bir sabit değer için let ve dizi, nesne, ok fonksiyonu ve işlev ifadesi için const özelliğini kullanabilirsiniz.
 
 ### Object - Nesne
+
+Her şey bir nesne olabilir ve nesnelerin özellikleri ve özelliklerinin değerleri vardır, bu nedenle bir nesne bir anahtar değer çiftidir. Bir nesneyi tam anlamıyla oluşturmak için iki köşeli parantez kullanırız.
+
+#### Boş nesne oluşturmak
+
+`const person = {}`
+
+#### Değerle birlikte nesne oluşturmak
+
+```
+const person = {
+  firstName: 'Asabeneh',
+  lastName: 'Yetayeh',
+  age: 250,
+  country: 'Finland',
+  city: 'Helsinki',
+  skills: [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Node',
+    'MongoDB',
+    'Python',
+    'D3.js'
+  ],
+  isMarried: true
+}
+console.log(person)
+```
+
+#### Nesneden değerleri alabilmek
+
+Nesnenin değerlerine iki yöntem kullanarak erişebiliriz:
+
+- . operatörünü kullanarak erişebiliriz
+- köşeli parantez kullanarak erişebiliriz
+
+#### Object methodları oluşturma
+
+getFullName, kişi nesnesinin içindeki işlevdir ve biz ona nesne yöntemi diyoruz. this anahtar sözcüğü, nesnenin kendisine atıfta bulunur. Nesnenin farklı özelliklerinin değerlerine erişmek için this kelimesini kullanabiliriz. Bir arrow funtionu nesne yöntemi olarak kullanamayız çünkü bu sözcüğü nesnenin kendisi yerine bir arrow funtionun içindeki pencereyi ifade eder.
+
+### Object methodları
+
+Bir nesneyi manipüle etmek için farklı yöntemler vardır.
+
+#### Object.assign
+
+Nesneyi orijinal nesneyi değiştirmeden kopyalamak için kullanılır.
+
+#### Object.keys()
+
+Bir nesnenin anahtarlarını veya özelliklerini dizi olarak almak için kullanılır.
+
+#### Object.values()
+
+Nesnenin key'lerine karşılık gelen değerleri dizi içerisinde almak için kullanılır.
+
+#### Object.entries()
+
+Bir dizideki key ve value değerlerini almak için kullanılır.
+
+#### hasOwnProperty()
+
+Bir nesnede belirli bir anahtar veya özelliğin bulunup bulunmadığını kontrol etmek için kullanılır.
